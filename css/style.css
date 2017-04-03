@@ -1,0 +1,47 @@
+body {
+  margin: 0px; }
+
+.container > section {
+  display: flex;
+  height: 500px; }
+
+#manga_container {
+  width: 500px;
+  height: 80%;
+  background-color: #CCC;
+  transition: 0.5s;
+  margin: 100px auto 0; }
+  #manga_container > div {
+    width: 100%;
+    height: 60px;
+    background-color: #999;
+    position: relative;
+    display: block;
+    margin-top: 340px;
+    transition: 5s; }
+    #manga_container > div span:last-child {
+      width: 50px;
+      height: 50px;
+      padding: 5px;
+      background: url("../img/expand.png") center no-repeat;
+      background-color: transparent;
+      display: block;
+      float: right;
+      transition: 0.5s; }
+    #manga_container > div span:last-child:hover {
+      background-color: #48F442;
+      transition: 0.5s; }
+
+.fullscreen {
+  z-index: 9999;
+  width: 100% !important;
+  height: 100% !important;
+  position: fixed;
+  transition: 0.5s !important;
+  margin: 0 !important; }
+  .fullscreen > div {
+    position: absolute !important;
+    bottom: 0px;
+    transition: 5s; }
+
+/*# sourceMappingURL=style.css.map */
