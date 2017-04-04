@@ -1,5 +1,6 @@
 body {
-  margin: 0px; }
+  margin: 0px;
+  background-color: #111; }
 
 .container > section {
   display: flex;
@@ -8,36 +9,53 @@ body {
 #manga_container {
   width: 500px;
   height: 80%;
-  background-color: #CCC;
+  background-color: #555;
   transition: 0.5s;
   margin: 100px auto 0; }
   #manga_container > div {
     width: 100%;
     height: 60px;
-    background-color: #999;
+    background-color: #222;
     position: relative;
     display: block;
     margin-top: 340px;
     transition: 5s; }
-    #manga_container > div span:last-child {
-      width: 50px;
-      height: 50px;
-      padding: 5px;
-      background: url("../img/expand.png") center no-repeat;
-      background-color: transparent;
-      display: block;
-      float: right;
-      transition: 0.5s; }
-    #manga_container > div span:last-child:hover {
-      background-color: #48F442;
-      transition: 0.5s; }
+    #manga_container > div > div {
+      width: 500px;
+      margin: 0 auto; }
+      #manga_container > div > div span {
+        width: 50px;
+        height: 50px;
+        padding: 5px;
+        background-color: transparent;
+        display: block;
+        float: left;
+        transition: 0.5s; }
+      #manga_container > div > div span:hover {
+        background-color: #48F442 !important;
+        transition: 0.5s; }
+      #manga_container > div > div span:nth-child(1) {
+        background: url("../img/x-left.png") center no-repeat;
+        margin-right: 25px; }
+      #manga_container > div > div span:nth-child(2) {
+        background: url("../img/left.png") center no-repeat;
+        margin: 0 25px; }
+      #manga_container > div > div span:nth-child(3) {
+        background: url("../img/expand.png") center no-repeat;
+        margin: 0 25px; }
+      #manga_container > div > div span:nth-child(4) {
+        background: url("../img/right.png") center no-repeat;
+        margin: 0 25px; }
+      #manga_container > div > div span:nth-child(5) {
+        background: url("../img/x-right.png") center no-repeat;
+        margin-left: 25px; }
 
 .fullscreen {
   z-index: 9999;
   width: 100% !important;
   height: 100% !important;
   position: fixed;
-  transition: 0.5s !important;
+  transition: 0.1s !important;
   margin: 0 !important; }
   .fullscreen > div {
     position: absolute !important;
