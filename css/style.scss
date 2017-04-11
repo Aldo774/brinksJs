@@ -1,44 +1,78 @@
 body{
-	margin: 0px; background-color: #111;
+	margin: 0px; background-color: #000;
 }
 .container{
 	> section{
-		display:flex; height: 500px;
+		display:flex; height: 600px;
 	}
 }
+aside{width: 80px; background-color: #111; position:fixed; top: 0; left: 0; height: 100%; opacity: 0; transition: 0.5s; z-index: 15; border-right: 4px solid #333;
+	> ul{list-style-type: none; margin: 0; padding: 0;
+		li{margin: 30px auto 10px; display: block; width: 60px; border-radius: 30px; background-color: transparent; transition:0.3s; height: 60px;
+			div{top:2px; left: 2px; display: block; width: 56px; border-radius: 28px; background-color: #111 !important; height: 56px; position: relative;
+				span{width: 56px; height: 56px; display: block;}
+			}
+		}
+		li:nth-child(1){
+			div{background: url("../img/settings_white.png") center no-repeat;
+				span:hover{background: url("../img/settings_green.png") center no-repeat;}
+			}
+		}
+		li:nth-child(2){
+			div{background: url("../img/text_file_white.png") center no-repeat;
+				span:hover{background: url("../img/text_file_green.png") center no-repeat;}
+			}
+		}
+		li:nth-child(3){
+			div{background: url("../img/data_transfer_white.png") center no-repeat;
+				span:hover{background: url("../img/data_transfer_green.png") center no-repeat;}
+			}
+		}
+		li:nth-child(4){
+			div{background: url("../img/clouds_white.png") center no-repeat;
+				span:hover{background: url("../img/clouds_green.png") center no-repeat;}
+			}
+		}
+		li:hover{background-color: #08FF00; transition:0.3s;}
+	}
+}
+aside:hover{opacity: 1; transition: 0.5s;
+
+}
 #manga_container{
-	width:500px; height:80%; background-color:#555; transition: 0.5s; margin: 100px auto 0;
-	> div{
-		width: 100%; height: 60px; background-color:#222; position: relative; display: block; margin-top: 340px; transition: 5s;
-		> div{width: 500px; margin: 0 auto;
+	width:800px; height:80%; background-color:#555; transition: 0.5s; margin: 100px auto 0; border: 2px solid #111;
+	> div{opacity: 0; transition: 1s;
+		width: 100%; height: 60px; background-color:#222; position: relative; display: block; margin-top: 420px;
+		> div{width: 800px; margin: 0 auto;
 			span{
 				width:50px; height: 50px; padding: 5px; background-color: transparent; 
 				display: block; float:left; transition: 0.5s;
 			};
 			span:hover{
-				background-color: #48F442 !important; transition: 0.5s;
+				background-color: #08FF00 !important; transition: 0.5s;
 			};
 			span:nth-child(1){
-				background: url("../img/x-left.png") center no-repeat; margin-right: 25px
+				background: url("../img/x-left.png") center no-repeat; margin-right: 62.5px
 			}
 			span:nth-child(2){
-				background: url("../img/left.png") center no-repeat; margin: 0 25px;
+				background: url("../img/left.png") center no-repeat; margin: 0 62.5px;
 			}
 			span:nth-child(3){
-				background: url("../img/expand.png") center no-repeat; margin: 0 25px;
+				background: url("../img/expand.png") center no-repeat; margin: 0 62.5px;
 			}
 			span:nth-child(4){
-				background: url("../img/right.png") center no-repeat; margin: 0 25px;
+				background: url("../img/right.png") center no-repeat; margin: 0 62.5px;
 			}
 			span:nth-child(5){
-				background: url("../img/x-right.png") center no-repeat; margin-left: 25px;
+				background: url("../img/x-right.png") center no-repeat; margin-left: 62.5px;
 			}
 		}
 	};
+	> div:hover{opacity: 1; transition: 1s;}
 }
 .fullscreen{
-	z-index: 9999; width: 100% !important; height: 100% !important; position: fixed; transition: 0.1s !important; margin: 0 !important;
+	z-index: 5; width: 100% !important; height: 100% !important; position: fixed; transition: 0.1s !important; margin: 0 !important;
 	> div{
-		position: absolute !important; bottom: 0px; transition: 5s;
+		position: absolute !important; bottom: 0px;
 	}
 }
