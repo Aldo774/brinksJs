@@ -1,3 +1,5 @@
+@import "variables.scss";
+
 body{
 	margin: 0px; background-color: #000;
 }
@@ -6,10 +8,10 @@ body{
 		display:flex; height: 600px;
 	}
 }
-aside{width: 80px; background-color: #111; position:fixed; top: 0; left: 0; height: 100%; opacity: 0; transition: 0.5s; z-index: 15; border-right: 4px solid #333;
+aside{width: 80px; background-color: $bgColorDefault; position:fixed; top: 0; left: 0; height: 100%; opacity: 0; transition: 0.5s; z-index: 15; border-right: 4px solid $bgColorPanel;
 	> ul{list-style-type: none; margin: 0; padding: 0;
 		li{margin: 30px auto 10px; display: block; width: 60px; border-radius: 30px; background-color: transparent; transition:0.3s; height: 60px;
-			div{top:2px; left: 2px; display: block; width: 56px; border-radius: 28px; background-color: #111 !important; height: 56px; position: relative;
+			div{top:2px; left: 2px; display: block; width: 56px; border-radius: 28px; background-color: $bgColorDefault !important; height: 56px; position: relative;
 				span{width: 56px; height: 56px; display: block;}
 			}
 		}
@@ -33,23 +35,24 @@ aside{width: 80px; background-color: #111; position:fixed; top: 0; left: 0; heig
 				span:hover{background: url("../img/clouds_green.png") center no-repeat;}
 			}
 		}
-		li:hover{background-color: #08FF00; transition:0.3s;}
+		li:hover{background-color: $defaultColor; transition:0.3s;}
 	}
 }
 aside:hover{opacity: 1; transition: 0.5s;
 
 }
 #manga_container{
-	width:800px; height:80%; background-color:#555; transition: 0.5s; margin: 100px auto 0; border: 2px solid #111;
+	width:800px; height:80%; background-color: $mangaContainer; transition: 0.5s; margin: 100px auto 0; border: 4px solid $bgColorDefault;
 	> div{opacity: 0; transition: 1s;
-		width: 100%; height: 60px; background-color:#222; position: relative; display: block; margin-top: 420px;
+		width: 100%; height: 60px; background-color:$bgColorPanel; position: relative; display: block; margin-top: 420px;
 		> div{width: 800px; margin: 0 auto;
 			span{
-				width:50px; height: 50px; padding: 5px; background-color: transparent; 
+				width:50px; height: 46px; padding: 5px; background-color: transparent;
+				border-width: 4px 0 0 0; border-style: solid; border-color: $bgColorPanel;
 				display: block; float:left; transition: 0.5s;
 			};
 			span:hover{
-				background-color: #08FF00 !important; transition: 0.5s;
+				border-color: $iconBgColor; transition: 0.5s;
 			};
 			span:nth-child(1){
 				background: url("../img/x-left.png") center no-repeat; margin-right: 62.5px

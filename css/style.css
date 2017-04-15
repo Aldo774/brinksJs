@@ -16,7 +16,7 @@ aside {
   opacity: 0;
   transition: 0.5s;
   z-index: 15;
-  border-right: 4px solid #333; }
+  border-right: 4px solid #222; }
   aside > ul {
     list-style-type: none;
     margin: 0;
@@ -59,7 +59,7 @@ aside {
       aside > ul li:nth-child(4) div span:hover {
         background: url("../img/clouds_green.png") center no-repeat; }
     aside > ul li:hover {
-      background-color: #08FF00;
+      background-color: #00FF00;
       transition: 0.3s; }
 
 aside:hover {
@@ -69,10 +69,10 @@ aside:hover {
 #manga_container {
   width: 800px;
   height: 80%;
-  background-color: #555;
+  background-color: #444;
   transition: 0.5s;
   margin: 100px auto 0;
-  border: 2px solid #111; }
+  border: 4px solid #111; }
   #manga_container > div {
     opacity: 0;
     transition: 1s;
@@ -87,14 +87,17 @@ aside:hover {
       margin: 0 auto; }
       #manga_container > div > div span {
         width: 50px;
-        height: 50px;
+        height: 46px;
         padding: 5px;
         background-color: transparent;
+        border-width: 4px 0 0 0;
+        border-style: solid;
+        border-color: #222;
         display: block;
         float: left;
         transition: 0.5s; }
       #manga_container > div > div span:hover {
-        background-color: #08FF00 !important;
+        border-color: #00AA00;
         transition: 0.5s; }
       #manga_container > div > div span:nth-child(1) {
         background: url("../img/x-left.png") center no-repeat;
