@@ -55,19 +55,34 @@ aside:hover{opacity: 1; transition: 0.5s;
 				border-color: $iconBgColor; transition: 0.5s;
 			};
 			span:nth-child(1){
-				background: url("../img/x-left.png") center no-repeat; margin-right: 62.5px
+				background: url("../img/x-left.png") center no-repeat; margin-right: 62.5px;
+				&:hover{
+					background: url("../img/x-left_green.png") center no-repeat !important;
+				}
 			}
 			span:nth-child(2){
 				background: url("../img/left.png") center no-repeat; margin: 0 62.5px;
+				&:hover{
+					background: url("../img/left_green.png") center no-repeat !important;
+				}
 			}
 			span:nth-child(3){
 				background: url("../img/expand.png") center no-repeat; margin: 0 62.5px;
+				&:hover{
+					background: url("../img/expand_green.png") center no-repeat !important;
+				}
 			}
 			span:nth-child(4){
 				background: url("../img/right.png") center no-repeat; margin: 0 62.5px;
+				&:hover{
+					background: url("../img/right_green.png") center no-repeat !important;
+				}
 			}
 			span:nth-child(5){
 				background: url("../img/x-right.png") center no-repeat; margin-left: 62.5px;
+				&:hover{
+					background: url("../img/x-right_green.png") center no-repeat !important;
+				}
 			}
 		}
 	};
@@ -80,6 +95,9 @@ aside:hover{opacity: 1; transition: 0.5s;
 		> div {
 			span:nth-child(3){
 				background: url("../img/fullscreen-exit.png") center no-repeat !important; margin: 0 62.5px;
+				&:hover{
+					background: url("../img/fullscreen-exit-green.png") center no-repeat !important;
+				}
 			}
 		}
 	}
