@@ -128,7 +128,7 @@ aside:hover {
         #manga_container > div > div span:nth-child(5):hover {
           background: url("../img/x-right_green.png") center no-repeat; }
   #manga_container > div:hover {
-    opacity: 0.6;
+    opacity: 0.7;
     transition: 1s;
     z-index: 12; }
 
@@ -139,52 +139,53 @@ aside:hover {
   position: absolute;
   top: -600px;
   opacity: 0;
-  transition: 2s; }
+  transition: 1s; }
   .menuWindown > div {
     display: table;
     margin: 200px auto 0;
     background-color: #222; }
-    .menuWindown > div form {
-      display: table;
-      background-color: #111;
-      padding: 0;
-      margin: 0;
-      border-top: 10px solid #222; }
-      .menuWindown > div form div {
-        float: left;
-        margin: 0 auto; }
-        .menuWindown > div form div input[type="file"] {
-          opacity: 0;
-          display: block;
-          float: left;
-          width: 100px;
-          height: 28px;
-          padding: 14px 20px;
-          position: absolute;
-          z-index: -1; }
-        .menuWindown > div form div label {
-          width: 140px;
-          display: block;
-          float: left;
-          padding: 20px;
-          height: 18px;
-          color: #FFF;
-          cursor: pointer;
-          transition: 0.5s; }
-          .menuWindown > div form div label:hover {
-            background-color: #00AA00;
-            transition: 0.5s; }
-      .menuWindown > div form > a {
-        display: block;
-        width: 48px;
-        height: 58px;
-        float: left;
-        padding: 0 10px;
-        background: url("../img/view.png") center no-repeat;
+
+#loadFile form {
+  display: table;
+  background-color: #111;
+  padding: 0;
+  margin: 0;
+  border-top: 10px solid #222; }
+  #loadFile form div {
+    float: left;
+    margin: 0 auto; }
+    #loadFile form div input[type="file"] {
+      opacity: 0;
+      display: block;
+      float: left;
+      width: 100px;
+      height: 28px;
+      padding: 14px 20px;
+      position: absolute;
+      z-index: -1; }
+    #loadFile form div label {
+      width: 140px;
+      display: block;
+      float: left;
+      padding: 20px;
+      height: 18px;
+      color: #FFF;
+      cursor: pointer;
+      transition: 0.5s; }
+      #loadFile form div label:hover {
+        background-color: #00AA00;
         transition: 0.5s; }
-        .menuWindown > div form > a:hover {
-          background-color: #00AA00;
-          transition: 0.5s; }
+  #loadFile form > a {
+    display: block;
+    width: 48px;
+    height: 58px;
+    float: left;
+    padding: 0 10px;
+    background: url("../img/view.png") center no-repeat;
+    transition: 0.5s; }
+    #loadFile form > a:hover {
+      background-color: #00AA00;
+      transition: 0.5s; }
 
 .container_focus {
   top: 0 !important;

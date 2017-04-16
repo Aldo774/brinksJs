@@ -88,25 +88,27 @@ aside:hover{opacity: 1; transition: 0.5s;
 			}
 		}
 	};
-	> div:hover{opacity: 0.6; transition: 1s; z-index: 12;}
+	> div:hover{opacity: 0.7; transition: 1s; z-index: 12;}
 }
 
-.menuWindown{width: 100%; position: absolute; z-index: 6; position: absolute; top: -600px; opacity: 0; transition: 2s;
-	> div{display: table; margin: 200px auto 0; background-color: $bgColorPanel;
-		form{display: table; background-color: $bgColorDefault; padding: 0; margin: 0; border-top: 10px solid $bgColorPanel;
-			div{float: left; margin: 0 auto;
-				input[type="file"]{opacity: 0; display: block; float: left; width: 100px; height: 28px; padding: 14px 20px; position: absolute; z-index: -1;}
-				label{width: 140px; display:block; float: left; padding: 20px; height: 18px; color: #FFF; cursor: pointer; transition: 0.5s;
-					&:hover{
-						background-color: $iconBgColor; transition: 0.5s;
-					}
-				}
-			}
-			> a{display: block; width: 48px; height: 58px; float: left; padding: 0 10px; 
-				background: url("../img/view.png") center no-repeat; transition: 0.5s;
+.menuWindown{width: 100%; position: absolute; z-index: 6; position: absolute; top: -600px; opacity: 0; transition: 1s;
+	> div{display: table; margin: 200px auto 0; background-color: $bgColorPanel;}
+}
+
+#loadFile{
+	form{display: table; background-color: $bgColorDefault; padding: 0; margin: 0; border-top: 10px solid $bgColorPanel;
+		div{float: left; margin: 0 auto;
+			input[type="file"]{opacity: 0; display: block; float: left; width: 100px; height: 28px; padding: 14px 20px; position: absolute; z-index: -1;}
+			label{width: 140px; display:block; float: left; padding: 20px; height: 18px; color: #FFF; cursor: pointer; transition: 0.5s;
 				&:hover{
 					background-color: $iconBgColor; transition: 0.5s;
 				}
+			}
+		}
+		> a{display: block; width: 48px; height: 58px; float: left; padding: 0 10px; 
+			background: url("../img/view.png") center no-repeat; transition: 0.5s;
+			&:hover{
+				background-color: $iconBgColor; transition: 0.5s;
 			}
 		}
 	}
