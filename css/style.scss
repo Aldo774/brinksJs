@@ -91,7 +91,7 @@ aside:hover{opacity: 1; transition: 0.5s;
 	> div:hover{opacity: 0.6; transition: 1s; z-index: 12;}
 }
 
-.menuWindown{width: 100%; position: absolute; z-index: 6;
+.menuWindown{width: 100%; position: absolute; z-index: 6; position: absolute; top: -600px; opacity: 0; transition: 2s;
 	> div{display: table; margin: 200px auto 0; background-color: $bgColorPanel;
 		form{display: table; background-color: $bgColorDefault; padding: 0; margin: 0; border-top: 10px solid $bgColorPanel;
 			div{float: left; margin: 0 auto;
@@ -111,6 +111,8 @@ aside:hover{opacity: 1; transition: 0.5s;
 		}
 	}
 }
+
+.container_focus{top: 0 !important; opacity: 1 !important; transition: 1s;}
 
 .fullscreen{
 	width: 100% !important; height: 100% !important; position: fixed; transition: 0.1s !important; margin: 0 !important;

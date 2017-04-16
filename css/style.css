@@ -135,7 +135,11 @@ aside:hover {
 .menuWindown {
   width: 100%;
   position: absolute;
-  z-index: 6; }
+  z-index: 6;
+  position: absolute;
+  top: -600px;
+  opacity: 0;
+  transition: 2s; }
   .menuWindown > div {
     display: table;
     margin: 200px auto 0;
@@ -181,6 +185,11 @@ aside:hover {
         .menuWindown > div form > a:hover {
           background-color: #00AA00;
           transition: 0.5s; }
+
+.container_focus {
+  top: 0 !important;
+  opacity: 1 !important;
+  transition: 1s; }
 
 .fullscreen {
   width: 100% !important;
