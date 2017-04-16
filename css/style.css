@@ -103,27 +103,27 @@ aside:hover {
         background: url("../img/x-left.png") center no-repeat;
         margin-right: 62.5px; }
         #manga_container > div > div span:nth-child(1):hover {
-          background: url("../img/x-left_green.png") center no-repeat !important; }
+          background: url("../img/x-left_green.png") center no-repeat; }
       #manga_container > div > div span:nth-child(2) {
         background: url("../img/left.png") center no-repeat;
         margin: 0 62.5px; }
         #manga_container > div > div span:nth-child(2):hover {
-          background: url("../img/left_green.png") center no-repeat !important; }
+          background: url("../img/left_green.png") center no-repeat; }
       #manga_container > div > div span:nth-child(3) {
         background: url("../img/expand.png") center no-repeat;
         margin: 0 62.5px; }
         #manga_container > div > div span:nth-child(3):hover {
-          background: url("../img/expand_green.png") center no-repeat !important; }
+          background: url("../img/expand_green.png") center no-repeat; }
       #manga_container > div > div span:nth-child(4) {
         background: url("../img/right.png") center no-repeat;
         margin: 0 62.5px; }
         #manga_container > div > div span:nth-child(4):hover {
-          background: url("../img/right_green.png") center no-repeat !important; }
+          background: url("../img/right_green.png") center no-repeat; }
       #manga_container > div > div span:nth-child(5) {
         background: url("../img/x-right.png") center no-repeat;
         margin-left: 62.5px; }
         #manga_container > div > div span:nth-child(5):hover {
-          background: url("../img/x-right_green.png") center no-repeat !important; }
+          background: url("../img/x-right_green.png") center no-repeat; }
   #manga_container > div:hover {
     opacity: 1;
     transition: 1s; }
