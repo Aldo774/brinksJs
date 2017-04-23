@@ -7,7 +7,7 @@ body{
 }
 .container{
 	> section{
-		display:flex; height: 600px;
+		display:flex;
 	}
 }
 aside{width: 80px; background-color: $bgColorDefault; position:fixed; top: 0; left: 0; height: 100%; opacity: 0; transition: 0.5s; z-index: 10; border-right: 4px solid $bgColorPanel;
@@ -44,10 +44,14 @@ aside:hover{opacity: 1; transition: 0.5s;
 
 }
 #manga_container{
-	width:800px; height:80%; background-color: $mangaContainer; transition: 0.5s; margin: 100px auto 0; border: 4px solid $bgColorDefault; z-index: 5;
-	> div{opacity: 0; transition: 1s; 
-		width: 100%; height: 60px; background-color:$bgColorPanel; position: relative; display: block; margin-top: 420px;
-		> div{width: 800px; margin: 0 auto;
+	width:800px; min-height:60px; background-color: $mangaContainer; transition: 0.5s; margin: 100px auto 0; border: 4px solid $bgColorDefault; z-index: 5; overflow: hidden;
+	> div:nth-child(1){width: 100%; max-height: 500px; overflow-y: hidden;
+		> img{display: block; margin: 0 auto; max-width: 100%; height: auto;}
+		&:hover{ overflow-y: scroll;};
+	}
+	> div:nth-child(2){ opacity: 0; transition: 1s; 
+		width: 100%; height: 60px; background-color:$bgColorPanel; position: relative; display: block; margin-top: -60px; float: left;
+		> div{width: 800px; margin: 0 auto; display: flex;
 			span{
 				width:50px; height: 46px; padding: 5px; background-color: transparent;
 				border-width: 4px 0 0 0; border-style: solid; border-color: $bgColorPanel;
@@ -87,8 +91,8 @@ aside:hover{opacity: 1; transition: 0.5s;
 				}
 			}
 		}
+		&:hover{opacity: 0.7; transition: 1s; z-index: 12;};
 	};
-	> div:hover{opacity: 0.7; transition: 1s; z-index: 12;}
 }
 
 .menuWindown{width: 100%; position: absolute; z-index: 6; position: absolute; top: -600px; opacity: 0; transition: 1s;

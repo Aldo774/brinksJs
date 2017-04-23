@@ -5,8 +5,7 @@ body {
   font-family: 'Roboto', sans-serif; }
 
 .container > section {
-  display: flex;
-  height: 600px; }
+  display: flex; }
 
 aside {
   width: 80px;
@@ -70,13 +69,25 @@ aside:hover {
 
 #manga_container {
   width: 800px;
-  height: 80%;
+  min-height: 60px;
   background-color: #444;
   transition: 0.5s;
   margin: 100px auto 0;
   border: 4px solid #111;
-  z-index: 5; }
-  #manga_container > div {
+  z-index: 5;
+  overflow: hidden; }
+  #manga_container > div:nth-child(1) {
+    width: 100%;
+    max-height: 500px;
+    overflow-y: hidden; }
+    #manga_container > div:nth-child(1) > img {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto; }
+    #manga_container > div:nth-child(1):hover {
+      overflow-y: scroll; }
+  #manga_container > div:nth-child(2) {
     opacity: 0;
     transition: 1s;
     width: 100%;
@@ -84,11 +95,13 @@ aside:hover {
     background-color: #222;
     position: relative;
     display: block;
-    margin-top: 420px; }
-    #manga_container > div > div {
+    margin-top: -60px;
+    float: left; }
+    #manga_container > div:nth-child(2) > div {
       width: 800px;
-      margin: 0 auto; }
-      #manga_container > div > div span {
+      margin: 0 auto;
+      display: flex; }
+      #manga_container > div:nth-child(2) > div span {
         width: 50px;
         height: 46px;
         padding: 5px;
@@ -99,38 +112,38 @@ aside:hover {
         display: block;
         float: left;
         transition: 0.5s; }
-      #manga_container > div > div span:hover {
+      #manga_container > div:nth-child(2) > div span:hover {
         border-color: #00AA00;
         transition: 0.5s; }
-      #manga_container > div > div span:nth-child(1) {
+      #manga_container > div:nth-child(2) > div span:nth-child(1) {
         background: url("../img/x-left.png") center no-repeat;
         margin-right: 62.5px; }
-        #manga_container > div > div span:nth-child(1):hover {
+        #manga_container > div:nth-child(2) > div span:nth-child(1):hover {
           background: url("../img/x-left_green.png") center no-repeat; }
-      #manga_container > div > div span:nth-child(2) {
+      #manga_container > div:nth-child(2) > div span:nth-child(2) {
         background: url("../img/left.png") center no-repeat;
         margin: 0 62.5px; }
-        #manga_container > div > div span:nth-child(2):hover {
+        #manga_container > div:nth-child(2) > div span:nth-child(2):hover {
           background: url("../img/left_green.png") center no-repeat; }
-      #manga_container > div > div span:nth-child(3) {
+      #manga_container > div:nth-child(2) > div span:nth-child(3) {
         background: url("../img/expand.png") center no-repeat;
         margin: 0 62.5px; }
-        #manga_container > div > div span:nth-child(3):hover {
+        #manga_container > div:nth-child(2) > div span:nth-child(3):hover {
           background: url("../img/expand_green.png") center no-repeat; }
-      #manga_container > div > div span:nth-child(4) {
+      #manga_container > div:nth-child(2) > div span:nth-child(4) {
         background: url("../img/right.png") center no-repeat;
         margin: 0 62.5px; }
-        #manga_container > div > div span:nth-child(4):hover {
+        #manga_container > div:nth-child(2) > div span:nth-child(4):hover {
           background: url("../img/right_green.png") center no-repeat; }
-      #manga_container > div > div span:nth-child(5) {
+      #manga_container > div:nth-child(2) > div span:nth-child(5) {
         background: url("../img/x-right.png") center no-repeat;
         margin-left: 62.5px; }
-        #manga_container > div > div span:nth-child(5):hover {
+        #manga_container > div:nth-child(2) > div span:nth-child(5):hover {
           background: url("../img/x-right_green.png") center no-repeat; }
-  #manga_container > div:hover {
-    opacity: 0.7;
-    transition: 1s;
-    z-index: 12; }
+    #manga_container > div:nth-child(2):hover {
+      opacity: 0.7;
+      transition: 1s;
+      z-index: 12; }
 
 .menuWindown {
   width: 100%;
