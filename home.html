@@ -3,12 +3,11 @@
 		<meta charset="UTF-8">
 		<script src="js/lib/jquery-3.2.0.js"></script>
 		<script src="js/lib/uncompress.js"></script>
-		<script src="js/script/polyfill.js"></script>
 		<link rel="stylesheet" type="text/css" href="css/style.css"/>
 	</head>
 	<body>
 		<aside>
-			<ul>
+			<ul id="asideBar">
 				<li>
 					<div>
 						<span></span>
@@ -35,15 +34,15 @@
 			<section>
 				<div id="manga_container">
 					<div>
-						<img src="img/comic_green.png">
+						<img id="imgView" src="img/comic_green.png">
 					</div>
 					<div>
 						<div>
-							<span></span>
-							<span></span>
-							<span></span>
-							<span></span>
-							<span></span>
+							<span id="firstScene"></span>
+							<span id="previousScene"></span>
+							<span id="fullscreen"></span>
+							<span id="nextScene"></span>
+							<span id="lastScene"></span>
 						</div>
 					</div>
 				</div>
@@ -52,14 +51,15 @@
 						<article>
 							<div>
 								<label for="mangaInput" id="label">SEARCH FILE</label>
-								<input type="file" name="manga" id="mangaInput" accept=".rar">
+								<input type="file" name="manga" id="mangaInput" accept=".zip">
 							</div>
-							<a href="#"></a>
+							<a id="showViewManga" href="#"></a>
 						</article>
 					</div>
 				</div>
 			</section>
 		 </div>
+		<script src="js/script/polyfill.js"></script>
 		<script src="js/script/script.js"></script>
 	</body>
 </html>
