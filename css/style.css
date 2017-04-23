@@ -145,16 +145,16 @@ aside:hover {
     margin: 200px auto 0;
     background-color: #222; }
 
-#loadFile form {
+#loadFile article {
   display: table;
   background-color: #111;
   padding: 0;
   margin: 0;
   border-top: 10px solid #222; }
-  #loadFile form div {
+  #loadFile article div {
     float: left;
     margin: 0 auto; }
-    #loadFile form div input[type="file"] {
+    #loadFile article div input[type="file"] {
       opacity: 0;
       display: block;
       float: left;
@@ -163,7 +163,7 @@ aside:hover {
       padding: 14px 20px;
       position: absolute;
       z-index: -1; }
-    #loadFile form div label {
+    #loadFile article div label {
       width: 140px;
       display: block;
       float: left;
@@ -172,10 +172,10 @@ aside:hover {
       color: #FFF;
       cursor: pointer;
       transition: 0.5s; }
-      #loadFile form div label:hover {
+      #loadFile article div label:hover {
         background-color: #00AA00;
         transition: 0.5s; }
-  #loadFile form > a {
+  #loadFile article > a {
     display: block;
     width: 48px;
     height: 58px;
@@ -183,7 +183,7 @@ aside:hover {
     padding: 0 10px;
     background: url("../img/view.png") center no-repeat;
     transition: 0.5s; }
-    #loadFile form > a:hover {
+    #loadFile article > a:hover {
       background-color: #00AA00;
       transition: 0.5s; }
 
