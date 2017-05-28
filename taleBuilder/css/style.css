@@ -1,3 +1,68 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+body {
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px; }
+
+#menuBar {
+  display: flex;
+  background-color: #333338;
+  width: 300px;
+  height: 100%; }
+  #menuBar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; }
+    #menuBar ul li {
+      margin: 0;
+      width: 100%; }
+      #menuBar ul li a {
+        text-decoration: none;
+        color: #D80;
+        width: calc(100% - 18px);
+        display: table;
+        padding: 20px 0 20px 15px;
+        border-left: 3px solid #333338; }
+        #menuBar ul li a i:nth-child(1) {
+          color: #FFF;
+          text-align: center;
+          margin: 0 10px 0 0;
+          font-size: 16px;
+          min-width: 16px;
+          max-width: 16px;
+          padding: 10px;
+          border-radius: 18px;
+          background-color: #FA0;
+          float: left; }
+        #menuBar ul li a span:nth-child(2) {
+          display: block;
+          width: calc(100% - 78px);
+          color: #778;
+          float: left;
+          padding-top: 8px; }
+        #menuBar ul li a span:nth-child(3) {
+          display: block;
+          width: 16px;
+          border-top: solid 16px transparent;
+          border-bottom: solid 16px transparent;
+          border-right: solid 16px transparent;
+          background-position: center center;
+          background-size: 100% 100%;
+          float: right;
+          display: block; }
+        #menuBar ul li a:focus {
+          border-color: #D80;
+          transition: 0.5s;
+          background-color: #222228 !important; }
+          #menuBar ul li a:focus > span:nth-child(3) {
+            border-right: solid 16px #FFF; }
+          #menuBar ul li a:focus > span:nth-child(2) {
+            color: #99A !important; }
+      #menuBar ul li:hover a {
+        border-color: #FA0;
+        background-color: #445; }
+        #menuBar ul li:hover a > span:nth-child(2) {
+          color: #99A; }
 
 /*# sourceMappingURL=style.css.map */

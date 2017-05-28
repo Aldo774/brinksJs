@@ -1,0 +1,27 @@
+$menuColor: #333338;
+$itemMenuHover: #445;
+$itemMenuColorFocus: #99A;
+$itemMenuFocus: #222228;
+$selectedMenu: #D80;
+$selectedMenuHover: #FA0;
+$fontMenu: #778;
+$fontMenuHover: #99A;
+$selectedMenuTri: #FFF;
+$menuWidthFirstElem: 30px;
+$menuWidthLastElem: 16px;
+$menuWidthSecondElem: calc(100% - 78px);
+$menuTriBorder: 16px;
+$leftBorderMenu: 3px;
+$spaceBetweenMenu: 15px;
+
+@mixin awesomeIcon {
+  color: #FFF;
+  text-align: center;
+  margin: 0 10px 0 0;
+  font-size: 16px;
+  min-width: $menuWidthLastElem;
+  max-width: $menuWidthLastElem;
+  padding: 10px;
+  border-radius: 18px;
+  background-color: #FA0;
+}
