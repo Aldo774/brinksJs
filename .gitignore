@@ -88,5 +88,7 @@ ENV/
 .ropeproject
 
 # Sass Stuff
-css/style.css.map
-css/.sass-cache
+taleBuilder/css/style.css.map
+taleBuilder/css/.sass-cache
+mangaReader/css/style.css.map
+mangaReader/css/.sass-cache
