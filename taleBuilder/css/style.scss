@@ -2,30 +2,27 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body{margin: 0; font-family: 'Roboto', sans-serif; font-size: 14px;}
-
-#menuBar{display: flex; background-color: $menuColor; width: 300px; height: 100%;
-  ul{list-style: none; padding: 0; margin: 0; width: 100%;
-    li{margin: 0; width: 100%;
-      a{text-decoration: none; color: $selectedMenu; width: calc(100% - 18px); display: table;
-        padding: 20px 0 20px $spaceBetweenMenu; border-left: $leftBorderMenu solid $menuColor;
-        i:nth-child(1){@include awesomeIcon; float: left;}
-        span:nth-child(2){display: block; width: $menuWidthSecondElem; color: $fontMenu;
-          float: left; padding-top: 8px;}
-        span:nth-child(3){display: block; width: $menuWidthLastElem;
-          border-top: solid $menuTriBorder transparent;
-          border-bottom: solid $menuTriBorder transparent;
-          border-right: solid $menuTriBorder transparent;
-          background-position: center center; background-size: 100% 100%;
-          float: right; display: block;}
-
-        &:focus{border-color: $selectedMenu; transition: 0.5s; background-color: $itemMenuFocus !important;
-          > span:nth-child(3){border-right: solid $menuTriBorder $selectedMenuTri;}
-          > span:nth-child(2){color: $itemMenuColorFocus !important;}
+#menuBar{display: flex; background-color: $menuColor; width: 350px; height: 100%;
+  > div:first-child{width: 60px; background-color: $selectedMenu;}
+  > div{width: calc(100% - 60px);
+    > div{height: 80px; background-color: $menuSelectedItem; text-align: center;
+      p{margin: 0; padding-top: calc((calc(80px - 14px) / 2))}
+    }
+    ul{list-style: none; padding: 0; margin: 0; width: 100%;
+      li{margin: 0; width: 100%;
+        a{text-decoration: none; color: $selectedMenu; width: calc(100% - 18px); display: table;
+          padding: 20px 0 20px $spaceBetweenMenu; border-left: $leftBorderMenu solid $menuColor;
+          i:nth-child(1){@include awesomeIcon; float: left;}
+          span:nth-child(2){display: block; width: $menuWidthSecondElem; color: $fontMenu;
+            float: left; padding-top: 8px;}
+          &:focus{border-color: $BorderMenu; transition: 0.5s; background-color: $itemMenuFocus !important;
+            > span:nth-child(2){color: $itemMenuColorFocus !important;}
+          }
         }
-      }
-      &:hover{
-        a{border-color: $selectedMenuHover; background-color: $itemMenuHover;
-          > span:nth-child(2){color: $fontMenuHover;}
+        &:hover{
+          a{border-color: $selectedMenuHover; background-color: $itemMenuHover;
+            > span:nth-child(2){color: $fontMenuHover;}
+          }
         }
       }
     }

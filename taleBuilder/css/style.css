@@ -7,62 +7,62 @@ body {
 #menuBar {
   display: flex;
   background-color: #333338;
-  width: 300px;
+  width: 350px;
   height: 100%; }
-  #menuBar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    width: 100%; }
-    #menuBar ul li {
+  #menuBar > div:first-child {
+    width: 60px;
+    background-color: #D80; }
+  #menuBar > div {
+    width: calc(100% - 60px); }
+    #menuBar > div > div {
+      height: 80px;
+      background-color: #161619;
+      text-align: center; }
+      #menuBar > div > div p {
+        margin: 0;
+        padding-top: calc((calc(80px - 14px) / 2)); }
+    #menuBar > div ul {
+      list-style: none;
+      padding: 0;
       margin: 0;
       width: 100%; }
-      #menuBar ul li a {
-        text-decoration: none;
-        color: #D80;
-        width: calc(100% - 18px);
-        display: table;
-        padding: 20px 0 20px 15px;
-        border-left: 3px solid #333338; }
-        #menuBar ul li a i:nth-child(1) {
-          color: #FFF;
-          text-align: center;
-          margin: 0 10px 0 0;
-          font-size: 16px;
-          min-width: 16px;
-          max-width: 16px;
-          padding: 10px;
-          border-radius: 18px;
-          background-color: #FA0;
-          float: left; }
-        #menuBar ul li a span:nth-child(2) {
-          display: block;
-          width: calc(100% - 78px);
-          color: #778;
-          float: left;
-          padding-top: 8px; }
-        #menuBar ul li a span:nth-child(3) {
-          display: block;
-          width: 16px;
-          border-top: solid 16px transparent;
-          border-bottom: solid 16px transparent;
-          border-right: solid 16px transparent;
-          background-position: center center;
-          background-size: 100% 100%;
-          float: right;
-          display: block; }
-        #menuBar ul li a:focus {
-          border-color: #D80;
-          transition: 0.5s;
-          background-color: #222228 !important; }
-          #menuBar ul li a:focus > span:nth-child(3) {
-            border-right: solid 16px #FFF; }
-          #menuBar ul li a:focus > span:nth-child(2) {
-            color: #99A !important; }
-      #menuBar ul li:hover a {
-        border-color: #FA0;
-        background-color: #445; }
-        #menuBar ul li:hover a > span:nth-child(2) {
-          color: #99A; }
+      #menuBar > div ul li {
+        margin: 0;
+        width: 100%; }
+        #menuBar > div ul li a {
+          text-decoration: none;
+          color: #D80;
+          width: calc(100% - 18px);
+          display: table;
+          padding: 20px 0 20px 15px;
+          border-left: 3px solid #333338; }
+          #menuBar > div ul li a i:nth-child(1) {
+            color: #FFF;
+            text-align: center;
+            margin: 0 10px 0 0;
+            font-size: 16px;
+            min-width: 16px;
+            max-width: 16px;
+            padding: 10px;
+            border-radius: 18px;
+            background-color: #FA0;
+            float: left; }
+          #menuBar > div ul li a span:nth-child(2) {
+            display: block;
+            width: calc(100% - 78px);
+            color: #778;
+            float: left;
+            padding-top: 8px; }
+          #menuBar > div ul li a:focus {
+            border-color: #B60;
+            transition: 0.5s;
+            background-color: #222228 !important; }
+            #menuBar > div ul li a:focus > span:nth-child(2) {
+              color: #99A !important; }
+        #menuBar > div ul li:hover a {
+          border-color: #FA0;
+          background-color: #445; }
+          #menuBar > div ul li:hover a > span:nth-child(2) {
+            color: #99A; }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,11 +1,13 @@
-$menuColor: #333338;
-$itemMenuHover: #445;
-$itemMenuColorFocus: #99A;
-$itemMenuFocus: #222228;
-$selectedMenu: #D80;
-$selectedMenuHover: #FA0;
-$fontMenu: #778;
 $fontMenuHover: #99A;
+$fontMenu: #778;
+$itemMenuHover: #445;
+$menuColor: #333338;
+$itemMenuFocus: #222228;
+$menuSelectedItem: #161619;
+$itemMenuColorFocus: #99A;
+$selectedMenuHover: #FA0;
+$selectedMenu: #D80;
+$BorderMenu: #B60;
 $selectedMenuTri: #FFF;
 $menuWidthFirstElem: 30px;
 $menuWidthLastElem: 16px;
@@ -23,5 +25,5 @@ $spaceBetweenMenu: 15px;
   max-width: $menuWidthLastElem;
   padding: 10px;
   border-radius: 18px;
-  background-color: #FA0;
+  background-color: $selectedMenuHover;
 }
