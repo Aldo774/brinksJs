@@ -2,57 +2,59 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 body{margin: 0; font-family: 'Roboto', sans-serif; font-size: 14px;}
-aside{display: flex; background-color: $menuColor; width: 350px; height: 100%;
-  > div:nth-child(2){width: calc(100% - 40px);
-    > div{height: 80px; background-color: darken($menuColor, 3%); text-align: center;
-      p{margin: 0; padding-top: calc((calc(80px - 18px) / 2)); color: $selectedMenu; font-size: 18px;}
+aside{display: flex; background-color: $menuColor; width: 350px; min-height: 100%;
+  > div:nth-child(2){width: calc(100% - #{$menuBreadcrumbs});
+    > div{height: $heightMenuTitle; background-color: darken($menuColor, 3%); text-align: center;
+      p{margin: 0; padding-top: calc(#{$heightMenuTitle - $defaultHeightTitle} / 2); color: lighten($menuColor, 17%); font-size: $defaultHeightTitle;}
     }
   }
 }
 
 #menuBar{list-style: none; padding: 0; margin: 0; width: 100%;
   li{margin: 0; width: 100%;
-    a{text-decoration: none; color: $selectedMenu; width: calc(100% - 18px); display: table;
+    a{text-decoration: none; color: lighten($menuColor, 17%); width: calc(100% - #{$leftBorderMenu + $spaceBetweenMenu}); display: table;
       padding: 20px 0 20px $spaceBetweenMenu; border-left: $leftBorderMenu solid $menuColor;
       i:nth-child(1){@include awesomeIcon; float: left;}
-      span:nth-child(2){display: block; width: $menuWidthSecondElem; color: $fontMenu;
-        float: left; padding-top: 8px;}
-      &:focus{border-color: $BorderMenu; transition: 0.5s; background-color: $itemMenuFocus !important;
-        > span:nth-child(2){color: $itemMenuColorFocus !important;}
+      span:nth-child(2){display: block; width: $menuWidthSecondElem; color: lighten($menuColor, 30%);
+        float: left; padding-top: calc(#{$menuWidthLink} / 2);}
+      &:focus{border-color: darken($secondMenuColor, 13%); transition: 0.5s; background-color: darken($menuColor, 8%) !important;
+        > span:nth-child(2){color: lighten($menuColor, 40%) !important;}
       }
     }
     &:hover{
-      a{border-color: $selectedMenuHover; background-color: $itemMenuHover;
-        > span:nth-child(2){color: $fontMenuHover;}
+      a{border-color: $secondMenuColor; background-color: lighten($menuColor, 8%);
+        > span:nth-child(2){color: lighten($menuColor, 30%);}
       }
     }
   }
 }
 
-#menuBreadcrumbs{@include gradient; width: $menuBreadcrumbs; font-size: $fontBreadcrumbs; overflow: hidden;
+#menuBreadcrumbs{@include gradient(lighten($menuColor, 6%), lighten($menuColor, 17%), background, left);
+  width: $menuBreadcrumbs; font-size: $defaultFontSize; overflow: hidden;
   ul{list-style: none; display: inline-block; white-space: nowrap; margin: 0; padding: 10px 0;
     -webkit-transform:rotate(270deg);
     -moz-transform:rotate(270deg);
     -o-transform: rotate(270deg);
-    li{display: inline; width: 100%; margin-left: -10px;
+    li{display: inline; width: 100%; margin-left: -#{$menuBreadcrumbs / 2};
     +li:before{color: #FFF;}
     &:after{margin-top: 100%; float: left; content: "";}
-      a{text-decoration: none; color: darken($selectedMenu, 20%); transition: 0.3s;
+      a{text-decoration: none; color: darken(lighten($menuColor, 17%), 20%); transition: 0.3s;
       &:hover{color: #FFF;}
       span{padding: 0; display: inline-block;
-        &:nth-child(2){ position: relative; top: -5px;
-          border-top: solid $menuTriBorderOne transparent;
-          border-bottom: solid $menuTriBorderOne transparent;
-          border-right: solid $menuTriBorderOne transparent;
-          border-left: solid $menuTriBorderOne $selectedMenu;
+        &:nth-child(2){ position: relative; top: -#{$menuBreadcrumbs / 2 - ($menuBreadcrumbs / 2 - 5)};
+          width: 30px; height: 30px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;
+          border-top: solid #{$menuBreadcrumbs / 2 - 5} transparent;
+          border-bottom: solid #{$menuBreadcrumbs / 2 - 5} transparent;
+          border-right: solid #{$menuBreadcrumbs / 2 - 5} transparent;
+          border-left: solid #{$menuBreadcrumbs / 2 - 5} lighten($menuColor, 17%);
         }
-        &:nth-child(3){margin-left: calc(-#{$menuTriBorderOne} * 2 + 1px);
-          border-top: solid $menuTriBorderTwo transparent;
-          border-bottom: solid $menuTriBorderTwo transparent;
-          border-right: solid $menuTriBorderTwo transparent;
-          border-left: solid $menuTriBorderTwo darken($selectedMenu, 20%);
+        &:nth-child(3){margin-left: calc(-#{$menuBreadcrumbs / 2 - 5} * 2 + 1px);
+          border-top: solid #{$menuBreadcrumbs / 2} transparent;
+          border-bottom: solid #{$menuBreadcrumbs / 2} transparent;
+          border-right: solid #{$menuBreadcrumbs / 2} transparent;
+          border-left: solid #{$menuBreadcrumbs / 2} darken(lighten($menuColor, 17%), 20%);
         }
-        &:first-child{border: none; position: relative; top: calc((-#{$menuBreadcrumbs} / 2) + (#{$fontBreadcrumbs} / 2)); margin: 0 10px;}
+        &:first-child{border: none; position: relative; top: calc((-#{$menuBreadcrumbs} / 2) + (#{$defaultFontSize} / 2)); margin: 0 10px;}
       }
       }
     }

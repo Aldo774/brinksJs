@@ -1,41 +1,32 @@
-$fontMenuHover: #99A;
-$fontMenu: #778;
-$itemMenuHover: #445;
-$menuColor: #333338;
-$itemMenuFocus: #222228;
-$menuSelectedItem: #202020;
-$itemMenuColorFocus: #99A;
-$selectedMenuHover: #FA0;
-$selectedMenu: #557;
-$BorderMenu: #B60;
-$selectedMenuTri: #FFF;
-$menuWidthFirstElem: 30px;
-$menuWidthLastElem: 16px;
-$menuWidthSecondElem: calc(100% - 78px);
-$paddingBreadcrumb: calc((40px / 2) - (18px / 2));
+$menuColor: #334;
+$secondMenuColor: #FA0;
+$awesomeColor: #FFF;
+$defaultFontSize: 14px;
 $menuBreadcrumbs: 40px;
-$menuTriBorderOne: 15px;
-$menuTriBorderTwo: 20px;
-$fontBreadcrumbs: 14px;
 $leftBorderMenu: 3px;
 $spaceBetweenMenu: 15px;
+$menuWidthLink: 16px;
+$menuWidthSecondElem: calc(100% - #{$menuWidthLink * 4});
+$paddingSecondElem: 10px;
+$heightMenuTitle: 70px;
+$defaultHeightTitle: 18px;
 
-@mixin gradient{
-  background: $selectedMenu; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, darken($selectedMenu, 10%), $selectedMenu, darken($selectedMenu, 10%));
-  background: -o-linear-gradient(left, darken($selectedMenu, 10%), $selectedMenu, darken($selectedMenu, 10%));
-  background: -moz-linear-gradient(left, darken($selectedMenu, 10%), $selectedMenu, darken($selectedMenu, 10%));
-  background: linear-gradient(left, darken($selectedMenu, 10%), $selectedMenu, darken($selectedMenu, 10%));
+@mixin gradient($cor1, $cor2, $property, $direction){
+  #{$property}: $cor2;
+  #{$property}: -webkit-linear-gradient($direction, $cor1, $cor2, $cor1);
+  #{$property}: -o-linear-gradient($direction, $cor1, $cor2, $cor1);
+  #{$property}: -moz-linear-gradient($direction, $cor1, $cor2, $cor1);
+  #{$property}: linear-gradient(to $direction, $cor1, $cor2, $cor1);
 }
 
 @mixin awesomeIcon {
-  color: #FFF;
+  color: $awesomeColor;
   text-align: center;
   margin: 0 10px 0 0;
-  font-size: 16px;
-  min-width: $menuWidthLastElem;
-  max-width: $menuWidthLastElem;
-  padding: 10px;
-  border-radius: 18px;
-  background-color: $selectedMenuHover;
+  font-size: $menuWidthLink;
+  min-width: $menuWidthLink;
+  max-width: $menuWidthLink;
+  padding: $paddingSecondElem;
+  border-radius: calc(#{2 * $paddingSecondElem + $menuWidthLink} / 2);
+  background-color: $secondMenuColor;
 }
