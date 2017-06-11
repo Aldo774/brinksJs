@@ -3,18 +3,30 @@ $fontMenu: #778;
 $itemMenuHover: #445;
 $menuColor: #333338;
 $itemMenuFocus: #222228;
-$menuSelectedItem: #161619;
+$menuSelectedItem: #202020;
 $itemMenuColorFocus: #99A;
 $selectedMenuHover: #FA0;
-$selectedMenu: #D80;
+$selectedMenu: #557;
 $BorderMenu: #B60;
 $selectedMenuTri: #FFF;
 $menuWidthFirstElem: 30px;
 $menuWidthLastElem: 16px;
 $menuWidthSecondElem: calc(100% - 78px);
-$menuTriBorder: 16px;
+$paddingBreadcrumb: calc((40px / 2) - (18px / 2));
+$menuBreadcrumbs: 40px;
+$menuTriBorderOne: 15px;
+$menuTriBorderTwo: 20px;
+$fontBreadcrumbs: 14px;
 $leftBorderMenu: 3px;
 $spaceBetweenMenu: 15px;
+
+@mixin gradient{
+  background: $selectedMenu; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, darken($selectedMenu, 10%), $selectedMenu, darken($selectedMenu, 10%));
+  background: -o-linear-gradient(left, darken($selectedMenu, 10%), $selectedMenu, darken($selectedMenu, 10%));
+  background: -moz-linear-gradient(left, darken($selectedMenu, 10%), $selectedMenu, darken($selectedMenu, 10%));
+  background: linear-gradient(left, darken($selectedMenu, 10%), $selectedMenu, darken($selectedMenu, 10%));
+}
 
 @mixin awesomeIcon {
   color: #FFF;
