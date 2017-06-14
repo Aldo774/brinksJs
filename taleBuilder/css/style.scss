@@ -1,8 +1,8 @@
 @import "variables.scss";
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
-body{margin: 0; font-family: 'Roboto', sans-serif; font-size: 14px;}
-aside{display: flex; background-color: $menuColor; width: 300px; min-height: 100%;
+body{margin: 0; font-family: 'Roboto', sans-serif; font-size: 14px; display: flex;}
+aside{display: flex; background-color: $menuColor; width: 300px; min-height: 100%; position: fixed; top: 0; left: 0; opacity: 0.8; z-index: 2;
   > div:nth-child(2){width: calc(100% - #{$menuBreadcrumbs}); border-right: solid 5px darken($menuColor, 5%);
     > div{height: $heightMenuTitle; background-color: darken($menuColor, 3%); text-align: center;
       p{margin: 0; padding-top: calc(#{$heightMenuTitle - $defaultHeightTitle} / 2); color: lighten($menuColor, 17%); font-size: $defaultHeightTitle;}
@@ -45,6 +45,21 @@ aside{display: flex; background-color: $menuColor; width: 300px; min-height: 100
         &:first-child{border: none; position: relative; top: calc(#{- $menuBreadcrumbs / 2} + #{$defaultFontSize}); margin: 0 10px;}
       }
       }
+    }
+  }
+}
+
+#container{@include gradient(darken($containerColor, 6%), darken($containerColor, 17%), background, bottom);
+  width: 100%; min-height: 100%;
+  nav{width: 100%; background-color: darken($containerColor, 10%); height: 60px;}
+  section{width: 98%; margin: 40px 1%;
+    article{height: calc(90% - 140px); margin: 1.5%; opacity: 0.7;
+      &:nth-child(1){width: 32%; float: left;
+        div{height: 47.5%; background-color: $containerColor;
+          &:first-child{margin-bottom: 5%;}
+        }
+      };
+      &:nth-child(2){width: 62%; float: right; background-color: $containerColor;};
     }
   }
 }

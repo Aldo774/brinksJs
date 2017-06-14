@@ -1,4 +1,5 @@
-$menuColor: #334;
+// Menu Variables
+$menuColor: #666;
 $secondMenuColor: #FA0;
 $awesomeColor: #FFF;
 $defaultFontSize: 14px;
@@ -11,12 +12,15 @@ $paddingSecondElem: 10px;
 $heightMenuTitle: 70px;
 $defaultHeightTitle: 18px;
 
+// Container Variables
+$containerColor: #444;
+
 @mixin gradient($cor1, $cor2, $property, $direction){
   #{$property}: $cor2;
-  #{$property}: -webkit-linear-gradient($direction, $cor1, $cor2, $cor1);
-  #{$property}: -o-linear-gradient($direction, $cor1, $cor2, $cor1);
-  #{$property}: -moz-linear-gradient($direction, $cor1, $cor2, $cor1);
-  #{$property}: linear-gradient(to $direction, $cor1, $cor2, $cor1);
+  #{$property}: -webkit-linear-gradient($direction, $cor1, $cor2);
+  #{$property}: -o-linear-gradient($direction, $cor1, $cor2);
+  #{$property}: -moz-linear-gradient($direction, $cor1, $cor2);
+  #{$property}: linear-gradient(to $direction, $cor1, $cor2);
 }
 
 @mixin awesomeIcon {

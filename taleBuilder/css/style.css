@@ -2,24 +2,30 @@
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  font-size: 14px; }
+  font-size: 14px;
+  display: flex; }
 
 aside {
   display: flex;
-  background-color: #334;
+  background-color: #666;
   width: 300px;
-  min-height: 100%; }
+  min-height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+  z-index: 2; }
   aside > div:nth-child(2) {
     width: calc(100% - 35px);
-    border-right: solid 5px #282835; }
+    border-right: solid 5px #595959; }
     aside > div:nth-child(2) > div {
       height: 70px;
-      background-color: #2c2c3b;
+      background-color: #5e5e5e;
       text-align: center; }
       aside > div:nth-child(2) > div p {
         margin: 0;
         padding-top: calc(52px / 2);
-        color: #585876;
+        color: #919191;
         font-size: 18px; }
 
 #menuBar {
@@ -32,11 +38,11 @@ aside {
     width: 100%; }
     #menuBar li a {
       text-decoration: none;
-      color: #585876;
+      color: #919191;
       width: calc(100% - 18px);
       display: table;
       padding: 20px 0 20px 15px;
-      border-left: 3px solid #334; }
+      border-left: 3px solid #666; }
       #menuBar li a i:nth-child(1) {
         color: #FFF;
         text-align: center;
@@ -51,27 +57,27 @@ aside {
       #menuBar li a span:nth-child(2) {
         display: block;
         width: calc(100% - 64px);
-        color: #777799;
+        color: #b3b3b3;
         float: left;
         padding-top: calc(16px / 2); }
       #menuBar li a:focus {
         border-color: #bd7e00;
         transition: 0.5s;
-        background-color: #22222d !important; }
+        background-color: #525252 !important; }
         #menuBar li a:focus > span:nth-child(2) {
-          color: #9494af !important; }
+          color: #cccccc !important; }
     #menuBar li:hover a {
       border-color: #FA0;
-      background-color: #44445b; }
+      background-color: #7a7a7a; }
       #menuBar li:hover a > span:nth-child(2) {
-        color: #777799; }
+        color: #b3b3b3; }
 
 #menuBreadcrumbs {
-  background: #585876;
-  background: -webkit-linear-gradient(bottom, #404055, #585876, #404055);
-  background: -o-linear-gradient(bottom, #404055, #585876, #404055);
-  background: -moz-linear-gradient(bottom, #404055, #585876, #404055);
-  background: linear-gradient(to bottom, #404055, #585876, #404055);
+  background: #919191;
+  background: -webkit-linear-gradient(bottom, #757575, #919191);
+  background: -o-linear-gradient(bottom, #757575, #919191);
+  background: -moz-linear-gradient(bottom, #757575, #919191);
+  background: linear-gradient(to bottom, #757575, #919191);
   width: 35px;
   font-size: 14px;
   overflow: hidden; }
@@ -88,11 +94,11 @@ aside {
       display: inline;
       width: 100%; }
       #menuBreadcrumbs ul li + li:before {
-        color: #334;
+        color: #666;
         content: "";
         height: 25px;
         width: 2px;
-        background-color: #334;
+        background-color: #666;
         display: inline-block;
         position: relative;
         top: 5px; }
@@ -102,7 +108,7 @@ aside {
         content: ""; }
       #menuBreadcrumbs ul li a {
         text-decoration: none;
-        color: #2c2c3b;
+        color: #5e5e5e;
         transition: 0.3s; }
         #menuBreadcrumbs ul li a:hover {
           color: #FFF; }
@@ -114,5 +120,37 @@ aside {
             position: relative;
             top: calc(-17.5px + 14px);
             margin: 0 10px; }
+
+#container {
+  background: #191919;
+  background: -webkit-linear-gradient(bottom, #353535, #191919);
+  background: -o-linear-gradient(bottom, #353535, #191919);
+  background: -moz-linear-gradient(bottom, #353535, #191919);
+  background: linear-gradient(to bottom, #353535, #191919);
+  width: 100%;
+  min-height: 100%; }
+  #container nav {
+    width: 100%;
+    background-color: #2b2b2b;
+    height: 60px; }
+  #container section {
+    width: 98%;
+    margin: 40px 1%; }
+    #container section article {
+      height: calc(90% - 140px);
+      margin: 1.5%;
+      opacity: 0.7; }
+      #container section article:nth-child(1) {
+        width: 32%;
+        float: left; }
+        #container section article:nth-child(1) div {
+          height: 47.5%;
+          background-color: #444; }
+          #container section article:nth-child(1) div:first-child {
+            margin-bottom: 5%; }
+      #container section article:nth-child(2) {
+        width: 62%;
+        float: right;
+        background-color: #444; }
 
 /*# sourceMappingURL=style.css.map */
