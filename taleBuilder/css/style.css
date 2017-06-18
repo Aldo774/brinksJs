@@ -13,7 +13,7 @@ aside {
   position: fixed;
   top: 0;
   left: 0;
-  opacity: 0.8;
+  opacity: 0.6;
   z-index: 2; }
   aside > div:nth-child(2) {
     width: calc(100% - 35px);
@@ -122,22 +122,29 @@ aside {
             margin: 0 10px; }
 
 #container {
-  background: #191919;
-  background: -webkit-linear-gradient(bottom, #353535, #191919);
-  background: -o-linear-gradient(bottom, #353535, #191919);
-  background: -moz-linear-gradient(bottom, #353535, #191919);
-  background: linear-gradient(to bottom, #353535, #191919);
+  background-image: #0d0d13;
+  background-image: -webkit-linear-gradient(bottom, #383854, #0d0d13);
+  background-image: -o-linear-gradient(bottom, #383854, #0d0d13);
+  background-image: -moz-linear-gradient(bottom, #383854, #0d0d13);
+  background-image: linear-gradient(to bottom, #383854, #0d0d13);
   width: 100%;
   min-height: 100%; }
   #container nav {
     width: 100%;
-    background-color: #2b2b2b;
-    height: 60px; }
+    background-color: #303047;
+    height: 60px;
+    border-bottom: solid 1px #252538; }
+  #container footer {
+    width: 100%;
+    background-color: #1b1b29;
+    height: 60px;
+    position: absolute;
+    bottom: 0; }
   #container section {
     width: 98%;
-    margin: 40px 1%; }
+    margin: 30px 1%; }
     #container section article {
-      height: calc(90% - 140px);
+      height: calc(90% - 120px);
       margin: 1.5%;
       opacity: 0.7; }
       #container section article:nth-child(1) {
@@ -145,12 +152,16 @@ aside {
         float: left; }
         #container section article:nth-child(1) div {
           height: 47.5%;
-          background-color: #444; }
+          background-color: #446; }
           #container section article:nth-child(1) div:first-child {
             margin-bottom: 5%; }
       #container section article:nth-child(2) {
         width: 62%;
         float: right;
-        background-color: #444; }
+        background-color: #446; }
+        #container section article:nth-child(2) div:nth-child(1) {
+          height: 40px;
+          width: 100%;
+          background-color: #07070a; }
 
 /*# sourceMappingURL=style.css.map */

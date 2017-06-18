@@ -13,7 +13,9 @@ $heightMenuTitle: 70px;
 $defaultHeightTitle: 18px;
 
 // Container Variables
-$containerColor: #444;
+$containerColor: #446;
+$heightContainerNav: 60px;
+$marginContainer: 30px;
 
 @mixin gradient($cor1, $cor2, $property, $direction){
   #{$property}: $cor2;
