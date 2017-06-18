@@ -29,6 +29,19 @@ aside{display: flex; background-color: $menuColor; width: 300px; min-height: 100
   }
 }
 
+.compactMenu{width: #{$menuWidthLink + 2 * $paddingSecondElem + 2 * $compactPaddingMenu}; display: table; border-right: solid 5px darken($menuColor, 5%);
+  >div:nth-child(1){display: none;}
+  >div:nth-child(2){width: 100%; border: none;
+    >div:nth-child(1){opacity: 0;}
+    #menuBar{
+      a{padding: 20px $compactPaddingMenu; width: auto;
+        i{margin: 0;}
+        span{display: none;}
+      }
+    }
+  }
+}
+
 #menuBreadcrumbs{@include gradient(lighten($menuColor, 6%), lighten($menuColor, 17%), background, bottom);
   width: $menuBreadcrumbs; font-size: $defaultFontSize; overflow: hidden;
   ul{list-style: none; display: inline-block; white-space: nowrap; margin: 0; padding: 10px 0;

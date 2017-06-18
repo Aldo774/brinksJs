@@ -72,6 +72,25 @@ aside {
       #menuBar li:hover a > span:nth-child(2) {
         color: #b3b3b3; }
 
+.compactMenu {
+  width: 56px;
+  display: table;
+  border-right: solid 5px #595959; }
+  .compactMenu > div:nth-child(1) {
+    display: none; }
+  .compactMenu > div:nth-child(2) {
+    width: 100%;
+    border: none; }
+    .compactMenu > div:nth-child(2) > div:nth-child(1) {
+      opacity: 0; }
+    .compactMenu > div:nth-child(2) #menuBar a {
+      padding: 20px 10px;
+      width: auto; }
+      .compactMenu > div:nth-child(2) #menuBar a i {
+        margin: 0; }
+      .compactMenu > div:nth-child(2) #menuBar a span {
+        display: none; }
+
 #menuBreadcrumbs {
   background: #919191;
   background: -webkit-linear-gradient(bottom, #757575, #919191);
