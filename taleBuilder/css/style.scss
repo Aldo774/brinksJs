@@ -55,10 +55,25 @@ aside{display: flex; background-color: $menuColor; width: 300px; min-height: 100
   footer{width: 100%; background-color: darken($containerColor, 20%); height: 60px; position: absolute; bottom: 0;}
   section{width: 96%; margin: $marginContainer 1%;
     article{height: calc(90% - #{2 * $marginContainer + $heightContainerNav}); opacity: 0.7;
-      &:nth-child(1){width: 32%; float: left;
-        div{height: 47.5%; background-color: $auxBoxContainer;
+      &:nth-child(1){width: 25%; float: left; margin-left: 100px;
+        >div{height: 47.5%; background-color: $auxBoxContainer; overflow: auto;
           border-left: 4px solid lighten($containerColor, 30%);
-          &:first-child{margin-bottom: 5%;}
+          &:nth-child(1){padding: 5px 10px;
+            img{height: 45px; width: 45px; float: left; display: block;}
+            p{margin: 0; color: lighten($containerColor, 55%); text-align: justify; width: calc(100% - 55px); display: inline-block; padding: 0 0 0 10px;}
+            div{padding: 0 0 10px;
+              +div:before{content: ""; width: 90%; height: 2px; border-radius: 1px; display: block;
+                 margin: 0 auto; background-color: darken($containerColor, 20%); margin: 0 5% 10px;}
+            }
+            &:first-child{margin-bottom: 5%;}
+          }
+          &:nth-child(2){
+            >span{font-style: italic; color: lighten($containerColor, 30%); font-size: 22px;
+               display: block; text-align: center; padding: 10px 0; background-color: darken($containerColor, 25%);}
+            >div{overflow: auto; padding: 10px; text-align: justify;
+              p{margin: 0; font-style: italic; color: lighten($containerColor, 35%);}
+            }
+          }
         }
       }
       &:nth-child(2){width: 62%; float: right;
@@ -71,8 +86,8 @@ aside{display: flex; background-color: $menuColor; width: 300px; min-height: 100
 
 #taleBox{margin-top: $marginTopTaleBox; overflow: auto; height: calc(100% - #{$divHeightAvatarList + $marginTopTaleBox});
   >div{width: 85%; display: table;
-    >div{@include spanAvatar; padding:10px; width: $avatarLenght; float: left;
-      &:nth-child(2){width: calc(100% - 100px);
+    >div{@include spanAvatar; padding:$paddingAvatarBox; width: $avatarLenght; float: left;
+      &:nth-child(2){width: calc(100% - #{$avatarLenght + 4 * $paddingAvatarBox});
         div{background-color: $rbgaTaleBackground; padding: 10px;
           +div{margin-top: 10px;}
         }

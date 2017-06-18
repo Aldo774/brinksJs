@@ -147,14 +147,57 @@ aside {
       height: calc(90% - 120px);
       opacity: 0.7; }
       #container section article:nth-child(1) {
-        width: 32%;
-        float: left; }
-        #container section article:nth-child(1) div {
+        width: 25%;
+        float: left;
+        margin-left: 100px; }
+        #container section article:nth-child(1) > div {
           height: 47.5%;
           background-color: rgba(68, 68, 102, 0.2);
+          overflow: auto;
           border-left: 4px solid #8f8fb4; }
-          #container section article:nth-child(1) div:first-child {
-            margin-bottom: 5%; }
+          #container section article:nth-child(1) > div:nth-child(1) {
+            padding: 5px 10px; }
+            #container section article:nth-child(1) > div:nth-child(1) img {
+              height: 45px;
+              width: 45px;
+              float: left;
+              display: block; }
+            #container section article:nth-child(1) > div:nth-child(1) p {
+              margin: 0;
+              color: #dbdbe7;
+              text-align: justify;
+              width: calc(100% - 55px);
+              display: inline-block;
+              padding: 0 0 0 10px; }
+            #container section article:nth-child(1) > div:nth-child(1) div {
+              padding: 0 0 10px; }
+              #container section article:nth-child(1) > div:nth-child(1) div + div:before {
+                content: "";
+                width: 90%;
+                height: 2px;
+                border-radius: 1px;
+                display: block;
+                margin: 0 auto;
+                background-color: #1b1b29;
+                margin: 0 5% 10px; }
+            #container section article:nth-child(1) > div:nth-child(1):first-child {
+              margin-bottom: 5%; }
+          #container section article:nth-child(1) > div:nth-child(2) > span {
+            font-style: italic;
+            color: #8f8fb4;
+            font-size: 22px;
+            display: block;
+            text-align: center;
+            padding: 10px 0;
+            background-color: #11111a; }
+          #container section article:nth-child(1) > div:nth-child(2) > div {
+            overflow: auto;
+            padding: 10px;
+            text-align: justify; }
+            #container section article:nth-child(1) > div:nth-child(2) > div p {
+              margin: 0;
+              font-style: italic;
+              color: #9e9ebe; }
       #container section article:nth-child(2) {
         width: 62%;
         float: right; }
@@ -180,7 +223,7 @@ aside {
     width: 85%;
     display: table; }
     #taleBox > div > div {
-      padding: 10px;
+      padding: 5px;
       width: 35px;
       float: left; }
       #taleBox > div > div span {
@@ -193,7 +236,7 @@ aside {
         #taleBox > div > div span + span {
           margin-left: 5px; }
       #taleBox > div > div:nth-child(2) {
-        width: calc(100% - 100px); }
+        width: calc(100% - 55px); }
         #taleBox > div > div:nth-child(2) div {
           background-color: rgba(68, 68, 102, 0.2);
           padding: 10px; }
