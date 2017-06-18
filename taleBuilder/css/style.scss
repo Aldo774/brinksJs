@@ -53,16 +53,47 @@ aside{display: flex; background-color: $menuColor; width: 300px; min-height: 100
   width: 100%; min-height: 100%;
   nav{width: 100%; background-color: darken($containerColor, 10%); height: $heightContainerNav; border-bottom: solid 1px darken($containerColor, 15%);}
   footer{width: 100%; background-color: darken($containerColor, 20%); height: 60px; position: absolute; bottom: 0;}
-  section{width: 98%; margin: $marginContainer 1%;
-    article{height: calc(90% - #{2 * $marginContainer + $heightContainerNav}); margin: 1.5%; opacity: 0.7;
+  section{width: 96%; margin: $marginContainer 1%;
+    article{height: calc(90% - #{2 * $marginContainer + $heightContainerNav}); opacity: 0.7;
       &:nth-child(1){width: 32%; float: left;
-        div{height: 47.5%; background-color: $containerColor;
+        div{height: 47.5%; background-color: $auxBoxContainer;
+          border-left: 4px solid lighten($containerColor, 30%);
           &:first-child{margin-bottom: 5%;}
         }
-      };
-      &:nth-child(2){width: 62%; float: right; background-color: $containerColor;
-        div:nth-child(1){height: 40px; width: 100%; background-color: darken($containerColor, 30%);}
-      };
+      }
+      &:nth-child(2){width: 62%; float: right;
+        >div:nth-child(1){height: $divHeightAvatarList; width: 100%; padding: 0 10px; @include spanAvatar;
+        }
+      }
     }
   }
+}
+
+#taleBox{margin-top: $marginTopTaleBox; overflow: auto; height: calc(100% - #{$divHeightAvatarList + $marginTopTaleBox});
+  >div{width: 85%; display: table;
+    >div{@include spanAvatar; padding:10px; width: $avatarLenght; float: left;
+      &:nth-child(2){width: calc(100% - 100px);
+        div{background-color: $rbgaTaleBackground; padding: 10px;
+          +div{margin-top: 10px;}
+        }
+      }
+      p{margin: 0; color: lighten($containerColor, 55%);}
+    }
+    +div{margin-top: 15px;}
+  }
+}
+
+.otherBox{float: right;
+  >div{float: right !important;
+    span{float: right;}
+    >div{float: right !important;}
+  }
+}
+
+.thoughtBox{font-style: italic;
+  p{color: lighten($containerColor, 25%) !important;}
+}
+
+.behaveBox{font-style: oblique;
+  p{color: lighten($containerColor, 5%) !important;}
 }

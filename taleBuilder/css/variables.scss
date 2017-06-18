@@ -13,9 +13,20 @@ $heightMenuTitle: 70px;
 $defaultHeightTitle: 18px;
 
 // Container Variables
+$auxBoxContainer: rgba(68, 68, 102, 0.2);
 $containerColor: #446;
 $heightContainerNav: 60px;
 $marginContainer: 30px;
+$rbgaTaleBackground: rgba(68, 68, 102, 0.2);
+$divHeightAvatarList: 40px;
+$marginTopTaleBox: 40px;
+$avatarLenght: 35px;
+@mixin spanAvatar{
+  span{display: inline-block; overflow: hidden; border-radius: #{$avatarLenght / 2};
+    img{max-width: $avatarLenght; max-height: $avatarLenght;}
+    +span{margin-left: 5px;}
+  }
+}
 
 @mixin gradient($cor1, $cor2, $property, $direction){
   #{$property}: $cor2;

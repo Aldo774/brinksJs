@@ -141,27 +141,87 @@ aside {
     position: absolute;
     bottom: 0; }
   #container section {
-    width: 98%;
+    width: 96%;
     margin: 30px 1%; }
     #container section article {
       height: calc(90% - 120px);
-      margin: 1.5%;
       opacity: 0.7; }
       #container section article:nth-child(1) {
         width: 32%;
         float: left; }
         #container section article:nth-child(1) div {
           height: 47.5%;
-          background-color: #446; }
+          background-color: rgba(68, 68, 102, 0.2);
+          border-left: 4px solid #8f8fb4; }
           #container section article:nth-child(1) div:first-child {
             margin-bottom: 5%; }
       #container section article:nth-child(2) {
         width: 62%;
-        float: right;
-        background-color: #446; }
-        #container section article:nth-child(2) div:nth-child(1) {
+        float: right; }
+        #container section article:nth-child(2) > div:nth-child(1) {
           height: 40px;
           width: 100%;
-          background-color: #07070a; }
+          padding: 0 10px; }
+          #container section article:nth-child(2) > div:nth-child(1) span {
+            display: inline-block;
+            overflow: hidden;
+            border-radius: 17.5px; }
+            #container section article:nth-child(2) > div:nth-child(1) span img {
+              max-width: 35px;
+              max-height: 35px; }
+            #container section article:nth-child(2) > div:nth-child(1) span + span {
+              margin-left: 5px; }
+
+#taleBox {
+  margin-top: 40px;
+  overflow: auto;
+  height: calc(100% - 80px); }
+  #taleBox > div {
+    width: 85%;
+    display: table; }
+    #taleBox > div > div {
+      padding: 10px;
+      width: 35px;
+      float: left; }
+      #taleBox > div > div span {
+        display: inline-block;
+        overflow: hidden;
+        border-radius: 17.5px; }
+        #taleBox > div > div span img {
+          max-width: 35px;
+          max-height: 35px; }
+        #taleBox > div > div span + span {
+          margin-left: 5px; }
+      #taleBox > div > div:nth-child(2) {
+        width: calc(100% - 100px); }
+        #taleBox > div > div:nth-child(2) div {
+          background-color: rgba(68, 68, 102, 0.2);
+          padding: 10px; }
+          #taleBox > div > div:nth-child(2) div + div {
+            margin-top: 10px; }
+      #taleBox > div > div p {
+        margin: 0;
+        color: #dbdbe7; }
+    #taleBox > div + div {
+      margin-top: 15px; }
+
+.otherBox {
+  float: right; }
+  .otherBox > div {
+    float: right !important; }
+    .otherBox > div span {
+      float: right; }
+    .otherBox > div > div {
+      float: right !important; }
+
+.thoughtBox {
+  font-style: italic; }
+  .thoughtBox p {
+    color: #8080aa !important; }
+
+.behaveBox {
+  font-style: oblique; }
+  .behaveBox p {
+    color: #4e4e75 !important; }
 
 /*# sourceMappingURL=style.css.map */
