@@ -1,4 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto");
+::-webkit-scrollbar {
+  width: 18px;
+  opacity: 0;
+  transition: 0.5s; }
+  ::-webkit-scrollbar:hover {
+    opacity: 1; }
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3); }
+
+::-webkit-scrollbar-thumb {
+  -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); }
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -141,21 +154,21 @@ aside {
             margin: 0 10px; }
 
 #container {
-  background-image: #0d0d13;
-  background-image: -webkit-linear-gradient(bottom, #383854, #0d0d13);
-  background-image: -o-linear-gradient(bottom, #383854, #0d0d13);
-  background-image: -moz-linear-gradient(bottom, #383854, #0d0d13);
-  background-image: linear-gradient(to bottom, #383854, #0d0d13);
+  background-image: #130d13;
+  background-image: -webkit-linear-gradient(bottom, #543854, #130d13);
+  background-image: -o-linear-gradient(bottom, #543854, #130d13);
+  background-image: -moz-linear-gradient(bottom, #543854, #130d13);
+  background-image: linear-gradient(to bottom, #543854, #130d13);
   width: 100%;
   min-height: 100%; }
   #container nav {
     width: 100%;
-    background-color: #303047;
+    background-color: #473047;
     height: 60px;
-    border-bottom: solid 1px #252538; }
+    border-bottom: solid 1px #382538; }
   #container footer {
     width: 100%;
-    background-color: #1b1b29;
+    background-color: #291b29;
     height: 60px;
     position: absolute;
     bottom: 0; }
@@ -173,7 +186,7 @@ aside {
           height: 47.5%;
           background-color: rgba(68, 68, 102, 0.2);
           overflow: auto;
-          border-left: 4px solid #8f8fb4; }
+          border-left: 4px solid #b48fb4; }
           #container section article:nth-child(1) > div:nth-child(1) {
             padding: 5px 10px; }
             #container section article:nth-child(1) > div:nth-child(1) img {
@@ -183,7 +196,7 @@ aside {
               display: block; }
             #container section article:nth-child(1) > div:nth-child(1) p {
               margin: 0;
-              color: #dbdbe7;
+              color: #e7dbe7;
               text-align: justify;
               width: calc(100% - 55px);
               display: inline-block;
@@ -197,18 +210,18 @@ aside {
                 border-radius: 1px;
                 display: block;
                 margin: 0 auto;
-                background-color: #1b1b29;
+                background-color: #291b29;
                 margin: 0 5% 10px; }
             #container section article:nth-child(1) > div:nth-child(1):first-child {
               margin-bottom: 5%; }
           #container section article:nth-child(1) > div:nth-child(2) > span {
             font-style: italic;
-            color: #8f8fb4;
+            color: #b48fb4;
             font-size: 22px;
             display: block;
             text-align: center;
             padding: 10px 0;
-            background-color: #11111a; }
+            background-color: #1a111a; }
           #container section article:nth-child(1) > div:nth-child(2) > div {
             overflow: auto;
             padding: 10px;
@@ -216,7 +229,7 @@ aside {
             #container section article:nth-child(1) > div:nth-child(2) > div p {
               margin: 0;
               font-style: italic;
-              color: #9e9ebe; }
+              color: #be9ebe; }
       #container section article:nth-child(2) {
         width: 62%;
         float: right; }
@@ -263,7 +276,7 @@ aside {
             margin-top: 10px; }
       #taleBox > div > div p {
         margin: 0;
-        color: #dbdbe7; }
+        color: #e7dbe7; }
     #taleBox > div + div {
       margin-top: 15px; }
 
@@ -279,11 +292,11 @@ aside {
 .thoughtBox {
   font-style: italic; }
   .thoughtBox p {
-    color: #8080aa !important; }
+    color: #aa80aa !important; }
 
 .behaveBox {
   font-style: oblique; }
   .behaveBox p {
-    color: #4e4e75 !important; }
+    color: #754e75 !important; }
 
 /*# sourceMappingURL=style.css.map */
