@@ -82,22 +82,6 @@ aside{display: flex; background-color: $menuColor; width: 300px; min-height: 100
       &:nth-child(1){width: 25%; float: left; margin-left: 100px;
         >div{height: 47.5%; background-color: rgba(0,0,0,0); overflow: auto; -webkit-background-clip: text; transition: background-color .3s;
           border-left: 4px solid colorUsed($containerColor, 30%);
-          &:nth-child(1){padding: 5px 10px;
-            img{height: 45px; width: 45px; float: left; display: block;}
-            p{margin: 0; color: colorUsed($containerColor, 55%); text-align: justify; width: calc(100% - 55px); display: inline-block; padding: 0 0 0 10px;}
-            div{padding: 0 0 10px;
-              +div:before{content: ""; width: 90%; height: 2px; border-radius: 1px; display: block;
-                 margin: 0 auto; background-color: colorUsed($containerColor, 20%); margin: 0 5% 10px;}
-            }
-            &:first-child{margin-bottom: 5%;}
-          }
-          &:nth-child(2){
-            >span{font-style: italic; color: colorUsed($containerColor, 50%); font-size: 22px;
-               display: block; text-align: center; padding: 10px 0; background-color: colorUsed($containerColor, 25%);}
-            >div{overflow: auto; padding: 10px; text-align: justify; background-color: colorUsed($containerColor, 20%);
-              p{margin: 0; font-style: italic; color: colorUsed($containerColor, 55%);}
-            }
-          }
           &:hover{background-color: colorUsed($containerColor, 55%);}
         }
       }
@@ -106,6 +90,24 @@ aside{display: flex; background-color: $menuColor; width: 300px; min-height: 100
         }
       }
     }
+  }
+}
+
+#taleAct{padding: 5px 10px;
+  img{height: 45px; width: 45px; float: left; display: block;}
+  p{margin: 0; color: colorUsed($containerColor, 55%); text-align: justify; width: calc(100% - 55px); display: inline-block; padding: 0 0 0 10px;}
+  div{padding: 0 0 10px;
+    +div:before{content: ""; width: 90%; height: 2px; border-radius: 1px; display: block;
+       margin: 0 auto; background-color: colorUsed($containerColor, 20%); margin: 0 5% 10px;}
+  }
+  &:first-child{margin-bottom: 5%;}
+}
+
+#taleScene{
+  >span{font-style: italic; color: colorUsed($containerColor, 50%); font-size: 22px;
+     display: block; text-align: center; padding: 10px 0; background-color: colorUsed($containerColor, 25%);}
+  >div{overflow: auto; padding: 10px; text-align: justify; background-color: colorUsed($containerColor, 20%);
+    p{margin: 0; font-style: italic; color: colorUsed($containerColor, 55%);}
   }
 }
 

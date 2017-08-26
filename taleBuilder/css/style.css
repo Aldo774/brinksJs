@@ -194,55 +194,11 @@ aside {
         margin-left: 100px; }
         #container section article:nth-child(1) > div {
           height: 47.5%;
-          background-color: transparent;
+          background-color: rgba(0, 0, 0, 0);
           overflow: auto;
           -webkit-background-clip: text;
           transition: background-color .3s;
           border-left: 4px solid #6f6f6f; }
-          #container section article:nth-child(1) > div:nth-child(1) {
-            padding: 5px 10px; }
-            #container section article:nth-child(1) > div:nth-child(1) img {
-              height: 45px;
-              width: 45px;
-              float: left;
-              display: block; }
-            #container section article:nth-child(1) > div:nth-child(1) p {
-              margin: 0;
-              color: #aeaeae;
-              text-align: justify;
-              width: calc(100% - 55px);
-              display: inline-block;
-              padding: 0 0 0 10px; }
-            #container section article:nth-child(1) > div:nth-child(1) div {
-              padding: 0 0 10px; }
-              #container section article:nth-child(1) > div:nth-child(1) div + div:before {
-                content: "";
-                width: 90%;
-                height: 2px;
-                border-radius: 1px;
-                display: block;
-                margin: 0 auto;
-                background-color: #555555;
-                margin: 0 5% 10px; }
-            #container section article:nth-child(1) > div:nth-child(1):first-child {
-              margin-bottom: 5%; }
-          #container section article:nth-child(1) > div:nth-child(2) > span {
-            font-style: italic;
-            color: #a2a2a2;
-            font-size: 22px;
-            display: block;
-            text-align: center;
-            padding: 10px 0;
-            background-color: #626262; }
-          #container section article:nth-child(1) > div:nth-child(2) > div {
-            overflow: auto;
-            padding: 10px;
-            text-align: justify;
-            background-color: #555555; }
-            #container section article:nth-child(1) > div:nth-child(2) > div p {
-              margin: 0;
-              font-style: italic;
-              color: #aeaeae; }
           #container section article:nth-child(1) > div:hover {
             background-color: #aeaeae; }
       #container section article:nth-child(2) {
@@ -261,6 +217,52 @@ aside {
               max-height: 35px; }
             #container section article:nth-child(2) > div:nth-child(1) span + span {
               margin-left: 5px; }
+
+#taleAct {
+  padding: 5px 10px; }
+  #taleAct img {
+    height: 45px;
+    width: 45px;
+    float: left;
+    display: block; }
+  #taleAct p {
+    margin: 0;
+    color: #aeaeae;
+    text-align: justify;
+    width: calc(100% - 55px);
+    display: inline-block;
+    padding: 0 0 0 10px; }
+  #taleAct div {
+    padding: 0 0 10px; }
+    #taleAct div + div:before {
+      content: "";
+      width: 90%;
+      height: 2px;
+      border-radius: 1px;
+      display: block;
+      margin: 0 auto;
+      background-color: #555555;
+      margin: 0 5% 10px; }
+  #taleAct:first-child {
+    margin-bottom: 5%; }
+
+#taleScene > span {
+  font-style: italic;
+  color: #a2a2a2;
+  font-size: 22px;
+  display: block;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #626262; }
+#taleScene > div {
+  overflow: auto;
+  padding: 10px;
+  text-align: justify;
+  background-color: #555555; }
+  #taleScene > div p {
+    margin: 0;
+    font-style: italic;
+    color: #aeaeae; }
 
 #taleBox {
   margin-top: 40px;
