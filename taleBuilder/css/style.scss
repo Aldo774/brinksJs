@@ -16,6 +16,7 @@ aside{display: flex; background-color: $menuColor; width: 300px; min-height: 100
     }
   }
 }
+footer{width: 100%; background-color: colorUsed($containerColor, 20%); height: 60px; position: fixed; bottom: 0;}
 
 #menuBar{list-style: none; padding: 0; margin: 0; width: 100%;
   li{margin: 0; width: 100%;
@@ -74,18 +75,17 @@ aside{display: flex; background-color: $menuColor; width: 300px; min-height: 100
 }
 
 #container{@include gradient(colorUsed($containerColor, 6%), colorUsed($containerColor, 27%), background-image, bottom);
-  width: 100%; min-height: 100%;
+  width: 100%; min-height: calc(100% - 70px); padding: 0 0 70px 0; display: block;
   nav{width: 100%; background-color: colorUsed($containerColor, 10%); height: $heightContainerNav; border-bottom: solid 1px colorUsed($containerColor, 15%);}
-  footer{width: 100%; background-color: colorUsed($containerColor, 20%); height: 60px; position: absolute; bottom: 0;}
   section{width: 96%; margin: $marginContainer 1%;
     article{height: calc(90% - #{2 * $marginContainer + $heightContainerNav}); opacity: 0.7;
-      &:nth-child(1){width: 25%; float: left; margin-left: 100px;
+      &:nth-child(1){width: 25%; float: left; margin-left: 13%;
         >div{height: 47.5%; background-color: rgba(0,0,0,0); overflow: auto; -webkit-background-clip: text; transition: background-color .3s;
           border-left: 4px solid colorUsed($containerColor, 30%);
           &:hover{background-color: colorUsed($containerColor, 55%);}
         }
       }
-      &:nth-child(2){width: 62%; float: right;
+      &:nth-child(2){width: 62%; float: left;
         >div:nth-child(1){height: $divHeightAvatarList; width: 100%; padding: 0 10px; @include spanAvatar;
         }
       }
@@ -138,4 +138,20 @@ aside{display: flex; background-color: $menuColor; width: 300px; min-height: 100
 
 .behaveBox{font-style: oblique;
   p{color: colorUsed($containerColor, 25%);}
+}
+
+@media screen and (max-width: 960px) {
+  #container{
+    > section{
+      article{width: 85% !important;
+        &:nth-child(1){height: 300px;
+          > div{width: 40% !important; float: left; height: 90%;}
+          #taleScene{margin-left: 10%;}
+        }
+        &:nth-child(2){
+          margin-left: 15%;
+        }
+      }
+    }
+  }
 }
