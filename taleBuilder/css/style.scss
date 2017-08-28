@@ -85,8 +85,8 @@ footer{width: 100%; background-color: colorUsed($containerColor, 20%); height: 6
           &:hover{background-color: colorUsed($containerColor, 55%);}
         }
       }
-      &:nth-child(2){width: 62%; float: left;
-        >div:nth-child(1){height: $divHeightAvatarList; width: 100%; padding: 0 10px; @include spanAvatar;
+      &:nth-child(2){width: 58%; float: left; margin-left: 4%;
+        >div:nth-child(1){height: $divHeightAvatarList; width: 100%; padding: 0 10px; @include spanAvatar; background-color: $containerColor; padding: 10px 0 0 10px;;
         }
       }
     }
@@ -150,6 +150,40 @@ footer{width: 100%; background-color: colorUsed($containerColor, 20%); height: 6
         }
         &:nth-child(2){
           margin-left: 15%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  #container{
+    > section{
+      article{width: 85% !important;
+        &:nth-child(1){height: 300px;
+          > div{width: 100% !important; height: 40%;}
+          #taleScene{margin-left: 0;}
+          #taleAct{padding: 0;}
+        }
+        &:nth-child(2){
+          margin-left: 15%;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .compactMenu{width: 30px !important;
+    > div:nth-child(2){
+      > div:nth-child(1){
+        i{margin: 27px auto !important;}
+      }
+      #menuBar{
+        a{padding: 10px $compactPaddingMenu/2;
+          :nth-child(1){
+            width: 16px; padding: 5px;
+          }
         }
       }
     }
