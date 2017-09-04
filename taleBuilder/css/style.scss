@@ -9,7 +9,8 @@
 
 body{margin: 0; font-family: 'Roboto', sans-serif; font-size: 14px; display: flex;}
 aside{display: flex; background-color: $menuColor; width: 300px; min-height: 100%; position: fixed; top: 0; left: 0; opacity: 0.9; z-index: 2; transition: .5s;
-  > div:nth-child(2){width: calc(100% - #{$menuBreadcrumbs}); border-right: solid 5px colorUsed($menuColor, 5%);
+  section{height: calc(100% - 70px); width: 100%; overflow: auto; position: absolute;}
+  > div:nth-child(2){width: calc(100% - #{$menuBreadcrumbs}); border-right: solid 5px colorUsed($menuColor, 5%); position: relative;
     > div:nth-child(1){height: $heightMenuTitle; background-color: colorUsed($menuColor, 3%); text-align: center;
       i{display: block; float: right; margin: #{$defaultHeightTitle * 1.5} 0 0; color: $secondMenuColor; font-size: #{$defaultHeightTitle * 1.5}; cursor: pointer;}
       p{margin: 0; padding-top: calc(#{$heightMenuTitle - $defaultHeightTitle} / 2); color: colorUsed($menuColor, 17%); font-size: $defaultHeightTitle;}
@@ -18,7 +19,7 @@ aside{display: flex; background-color: $menuColor; width: 300px; min-height: 100
 }
 footer{width: 100%; background-color: colorUsed($containerColor, 20%); height: 60px; position: fixed; bottom: 0;}
 
-#menuBar{list-style: none; padding: 0; margin: 0; width: 100%;
+#menuBar{list-style: none; padding: 0; margin: 0; width: 100%; height: calc(100% - 70px); overflow-x: hidden; overflow-y: auto; position: absolute;
   li{margin: 0; width: 100%;
     a{text-decoration: none; color: colorUsed($menuColor, 17%); width: calc(100% - #{$leftBorderMenu + $spaceBetweenMenu}); display: table;
       padding: 20px 0 20px $spaceBetweenMenu; border-left: $leftBorderMenu solid $menuColor;
@@ -37,16 +38,17 @@ footer{width: 100%; background-color: colorUsed($containerColor, 20%); height: 6
   }
 }
 
-.compactMenu{width: #{$menuWidthLink + 2 * $paddingSecondElem + 2 * $compactPaddingMenu};
- display: table; border-right: solid 5px colorUsed($menuColor, 5%); transition: .5s;
-  >div:nth-child(1){display: none;}
+.compactMenu{width: #{$menuWidthLink + 2 * $paddingSecondElem + 2 * $compactPaddingMenu}; ::-webkit-scrollbar {width: 2px !important;}
+ border-right: solid 5px colorUsed($menuColor, 5%); transition: .5s;
+  >div:nth-child(1){display: none;
+  }
   >div:nth-child(2){width: 100%; border: none;
     >div:nth-child(1){
       p{display: none;}
       i{display: block; margin: #{$defaultHeightTitle * 1.5} #{($menuWidthLink + 2 * $paddingSecondElem + 2 * $compactPaddingMenu)/4} 0 0; color: $secondMenuColor; font-size: #{$defaultHeightTitle * 1.5};}
     }
     #menuBar{
-      a{padding: 20px $compactPaddingMenu; width: auto;
+      a{padding: 20px $compactPaddingMenu; width: 100%;
         i{margin: 0;}
         span{display: none;}
       }
@@ -174,18 +176,23 @@ footer{width: 100%; background-color: colorUsed($containerColor, 20%); height: 6
 }
 
 @media screen and (max-width: 550px) {
-  .compactMenu{width: 30px !important;
+  .compactMenu{width: 40px !important;
     > div:nth-child(2){
       > div:nth-child(1){
         i{margin: 27px auto !important;}
       }
-      #menuBar{
+      #menuBar{height: calc(100% - 70px);
         a{padding: 10px $compactPaddingMenu/2;
           :nth-child(1){
             width: 16px; padding: 5px;
           }
         }
       }
+    }
+  }
+  #menuBar{height: calc(70% - 70px);
+    li{
+      a{padding: 10px 0 10px 15px;}
     }
   }
 }
